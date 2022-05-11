@@ -11,6 +11,7 @@
 - 타입(number, string)
 - 줄띄움(`(백틱), \ (역슬래쉬) ..)
 
-line 37
+[lab02_line 37](https://github.com/100SeongJun/JS/blob/main/step01_basic/lab03_output.html)
 - Undefined: 변수 선언은 돼 있지만 값이 존재 X
 - Null : 
+
