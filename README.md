@@ -7,11 +7,12 @@
 - let : 변수 재할당 재선언 모두 가능하지만 재할당 방식이 다름
 - const (사실상 고정값): 변수 재할당 재선언 모두 불가능
 ---
-## type_lab02
+
+## [type_lab02](https://github.com/100SeongJun/JS/blob/main/step02_data/type_lab02.html)
 - 타입(number, string)
 - 줄띄움(`(백틱), \ (역슬래쉬) ..)
 
-[lab02_line 37](https://github.com/100SeongJun/JS/blob/main/step01_basic/lab03_output.html)
+
 - Undefined: 변수 선언은 돼 있지만 값이 존재 X
 - Null : 
 
