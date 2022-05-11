@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function test(){
+        //     var a=prompt();
+        //     return a;
+        // }
+        // document.write(test());
+        
+        // let checkAge = function test2(){
+        //     console.log('a');
+        // }
+        // checkAge();
+        // console.log(checkAge());
+        
+        function minus(x){
+            return function(y)
+            {
+                return y-x;
+            }
+        }
+        let minus3 = minus(3);
+        console.log(minus3);
+        console.log(minus3(10));
+        /*callback 함수*/
+        // function hello(abc){
+        //     console.log('hello');
+        //     abc();
+        // }
+
+        // hello (
+        // function()
+        // {
+        //     console.log('callback');
+        // });
+
+        // abc = function(){
+        //     console.log('abc');
+        // }
+
+        // function abc(){
+        //     console.log('abc');
+        // }
+        
+    </script>
+    <div></div>
+</body>
+</html>
