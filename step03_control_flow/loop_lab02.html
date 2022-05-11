@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        // let i = 1
+        // while(i<=10){
+        //     document.write(i+'반복<br>');
+        //     i++;
+        // }
+    // function times(n){
+        
+    //     }
+        function sleep(ms){
+            const wakeUpTime=Date.now()+ms
+            while(Date.now()<wakeUpTime){}
+        }
+
+        for (let i = 10; i >= 0; i--) {
+            sleep(1000);
+            document.write(`발사 ${i}초 전<br>`);
+        }
+        document.write('발사');
+
+    </script>
 </body>
+
 </html>
