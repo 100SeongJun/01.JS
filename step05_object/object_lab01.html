@@ -8,7 +8,27 @@
 </head>
 <body>
     <script>
-        // 객체 : 존재하는 사물의 실체
+       
+       // 객체 : 존재하는 사물의 실체(설계도 필요)
+        // 1. 리터럴
+        let obj1 = {};
+        console.log(obj1);
+        console.log(typeof(obj1));
+        obj1.id=1;
+        obj1.name="js1";
+        console.log(obj1);
+
+        let obj2 = {id:1, name:"js1"};
+        console.log(obj2);
+
+        // 2. 생성자 함수
+        let obj3 = new Object();
+        obj3.id=3;
+        obj3.name='js2';
+        console.log(obj3);
+        console.log(typeof(obj3));
+
+
     </script>
 </body>
 </html>
