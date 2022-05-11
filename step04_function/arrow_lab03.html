@@ -16,9 +16,24 @@
         // arrow = (n) => {console.log(`화살표함수:${n}`)};
         // arrow(10);
 
-        add = (a, b) => { return a + b };
-        x = add(1, 2);
-        console.log(x);
+        // add = (a, b) => { return a + b };
+        // x = add(1, 2);
+        // console.log(x);
+
+        (function imdFunction1(){
+            console.log("즉시실행함수 1");
+        })();
+
+        (function imdFunction2(){
+            console.log("즉시실행함수 2");
+        }());
+
+        //매개변수가 있는 즉시실행 함수 만들기
+        let name = '주경야독';
+        (function imdFunction3(name){
+            console.log(name)
+        })(name);
+        // 마지막 소괄호가 매개변수 부분        
 
     </script>
 </body>
