@@ -43,5 +43,7 @@
 ### 함수
 - function
 
-## [scope] ()
+## [scope] (https://github.com/100SeongJun/JS/blob/main/step04_function/scope_lab02.html)
+### Scope
+- Scope
 
