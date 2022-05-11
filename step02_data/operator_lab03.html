@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 연산 -->
+    <script>
+        // 산술연산
+        let a = 3;
+        let b = 2;
+        console.log(a*b);   //6
+        console.log((1+2)*3);   //9
+        console.log(10/3);  //3.333...
+        console.log(10%3);  //1
+        console.log(2%3);   //2
+        console.log(10**3); //1000
+        console.log('a'+'b');   //ab
+        console.log('a'+3);     //a3
+        console.log('a'%'b');   //NaN
+        console.log(typeof('a'%'b'));   // Number
+        
+        // 단항연산 (++ --)
+        let c = 3;
+        console.log(c++); //3
+        console.log(++c); //5 
+        let x =10;
+
+        //비교연산( ==, >, < ,>= ,<= , !=, !== , === )
+        // == : 값 비교 / === : 값과 타입 비교
+        let y =10;
+        let z ='10';
+        console.log(y!==z);  //true
+        console.log((y===z)); //false 
+        console.log((y+''===z)); //true
+
+        //논리연산 (&& ||)
+        console.log((10<9) || (10>9));  //true
+        console.log((10<11) && (10>9)); //true
+        
+        //not 연산자 (!)
+        console.log (!(10<9)) // true
+    </script>
+</body>
+</html>
