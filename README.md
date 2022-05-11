@@ -36,4 +36,12 @@
 
 ## [loop_while](https://github.com/100SeongJun/JS/blob/main/step03_control_flow/loop_lab02.html)
 ### 반복문
-- 
+- for 
+- while
+
+## [function](https://github.com/100SeongJun/JS/blob/main/step04_function/function_lab01.html)
+### 함수
+- function
+
+## [scope] ()
+
