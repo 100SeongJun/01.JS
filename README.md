@@ -44,6 +44,6 @@
 - function
 
 ## [scope](https://github.com/100SeongJun/JS/blob/main/step04_function/scope_lab02.html)
-### Scope
+### 지역,전역
 - Scope
 
