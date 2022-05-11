@@ -4,9 +4,9 @@
 ### 변수
 - 변수 재사용 시 에러 메시지가 출력되지 않고 그대로 적용되는 문제점을 해결하기 위해 let const 사용 
 (코드량이 많을 경우 중복된 변수를 사용할 가능성이 있기 때문)
-- var : 변수 재할당 재선언 모두 가능
-- let : 변수 재할당 재선언 모두 가능하지만 재할당 방식이 다름
-- const (사실상 고정값): 변수 재할당 재선언 모두 불가능
+- var : 변수 재할당 재선언 모두 가능 (함수 스코프)
+- let : 변수 재할당 재선언 모두 가능하지만 재할당 방식이 다름 (블록 스코프)
+- const (사실상 고정값): 변수 재할당 재선언 모두 불가능 
 ---
 
 ## [type_lab02](https://github.com/100SeongJun/JS/blob/main/step02_data/type_lab02.html)
@@ -45,5 +45,7 @@
 
 ## [scope](https://github.com/100SeongJun/JS/blob/main/step04_function/scope_lab02.html)
 ### 지역,전역
-- Scope
+
+- var(함수스코프): hoist 기능으로 호출 이후 변수 선언이 돼있으면 </span style="color:red">undefined</span>
+- let, const : (블록스코프) hoist 기능이 없어 호출 이후 변수 선언이 돼있다면 </span style="color:red">에러 </span>
 
