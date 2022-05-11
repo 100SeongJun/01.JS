@@ -66,3 +66,10 @@
 
 - var(함수스코프): hoist 기능으로 호출 이후 변수 선언이 돼있으면 undefined
 - let, const : (블록스코프) hoist 기능이 없어 호출 이후 변수 선언이 돼있다면 에러
+
+## [Object](https://github.com/100SeongJun/JS/blob/main/step05_object/object_lab01.html)
+
+### 객체
+
+- 존재하는 모든 사물의 실체, 속성
+
