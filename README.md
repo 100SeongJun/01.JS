@@ -27,5 +27,8 @@
 
 - not 연산(!)
     - True False에 대한 값을 반전 시키는 연산자
-
-
+---
+## [condition_lab01](https://github.com/100SeongJun/JS/blob/main/step03_control_flow/condition_lab01.html)
+### 조건문
+- 조건을 만족할 경우 실행 로직을 정해주는 명령문
+#### if, else, else if
