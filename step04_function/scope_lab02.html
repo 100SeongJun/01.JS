@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
-        let scope1=10;
+        let scope1 = 10;
         {
             let scope1 = 20;
             // console.log(scope1);
-        } 
+        }
         //var: 함수 스코프
         {
-            var scopevar=50;
+            var scopevar = 50;
         }
         console.log(scopevar);
-        var scopevar2=60;
+        var scopevar2 = 60;
         console.log(scopevar2);
 
-        (function(){
+        (function () {
             scopevar2++;
             console.log(scopevar2);
         }
         )();
-        (function(){
-            var scopevar3 =70;
+        (function () {
+            var scopevar3 = 70;
             console.log(scopevar3);
         })();
         // console.log(scopevar3);
         // hoisting: 끌어올리다 (var 선언부만 끌어올림)
-            
-            console.log(hoist);
-            // let hoist  = 1;  // error
-            var hoist = 1;  // undefined
-            
+
+        console.log(hoist);
+        // let hoist  = 1;  // error
+        var hoist = 1;  // undefined
+
 
     </script>
 
 </body>
+
 </html>
