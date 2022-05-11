@@ -137,12 +137,17 @@
             }
         }
         const k = new Korean('Pusan');
-        k.getLoc();
-        Korean.prototype=person.prototype;
+        
+        // k.getLoc();
+        
+        Korean.prototype = person.prototype;
         
         const k2 = new Korean('Sacheon');
-        k2.getPlanet();
+        
 
+
+        // k2.getPlanet();
+                
         console.log(k instanceof Object);
         console.log(k instanceof Korean);
         console.log(k2 instanceof Korean);
