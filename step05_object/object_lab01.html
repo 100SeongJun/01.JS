@@ -1,34 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-       
-       // 객체 : 존재하는 사물의 실체(설계도 필요)
-        // 1. 리터럴
-        let obj1 = {};
-        console.log(obj1);
-        console.log(typeof(obj1));
-        obj1.id=1;
-        obj1.name="js1";
-        console.log(obj1);
+        /*       
+               // 객체 : 존재하는 사물의 실체(설계도 필요)
+                // 1. 리터럴
+                let obj1 = {};
+                console.log(obj1);
+                console.log(typeof(obj1));
+                obj1.id=1;
+                obj1.name="js1";
+                console.log(obj1);
+        
+                let obj2 = {id:1, name:"js1"};
+                console.log(obj2);
+        
+                // 2. 생성자 함수
+                let obj3 = new Object();
+                obj3.id=3;
+                obj3.name='js2';
+                console.log(obj3);
+                console.log(typeof(obj3));
+                //3. 사용자정의 생성자 함수
+                function Customer(id,name){
+                //step01
+                // this.id =id;
+                // this.name =name;
+                    
+                // step2 
+                    this.id=id;
+                    this.name=name;
+                }
+        
+                obj4 = new Customer();
+                console.log(typeof(obj4));
+                console.log(obj4);
+                
+        
+                // 문제
+                // let obj5 = new Customer();
+                // console.log(typeof(obj5));
+                // console.log(obj5);
+                // console.log(obj4==obj5);
+                // 동일한 값을 가지지 않은 상태에서 객체생성
+        
+                obj6=new Customer(6,'obj6');
+                obj7=new Customer (7,'obj7');
+                console.log(obj6);
+                console.log(obj7);
+        
+                this.getName = function(){
+                    return this.name;
+                    console.log(obj7.getName());
+                }
+        
+                // 
+                obj7.grade = 'vip';
+                console.log(obj7);
+                //프로퍼티 삭제
+                delete obj7.grade;
+                console.log(obj7);
+                
+                // 객체 정보 반환 
+                console.log(obj7);
+                console.log(obj7.id);
+                // console.log(obj7.grade); 없는 프로퍼티
+                
+                console.log(obj7['id']);
+                console.log(obj7['grade']);
+                //
+                console.log(Object.entries(obj7));
+                
+                //Object (key:value)
+                console.log(Object.keys(obj7))
+                console.log(Object.values(obj7))
+                
+                //for ~ in
+                for(let info in obj7){
+        
+                    console.log(obj7[info]);
+                }
+                // 객체를 생성할 때 사용자 생성자 함수는 화살표 함수를 사용할 수 없음
+                // 내부에 this 적용 불가능
+                // let Cat = (name,age) =>{
+                //     this.name=name;
+                //     this.age=age;
+                // }
+                // function Cat(name,age){ // 전환
+                //     this.name=name;
+                //     this.age=age;
+                // }
+                // let cat = new Cat('catt',4);
+                // console.log(cat)
+            */
+        function Cat(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+        let c = new Cat('js1', 3);
+        console.log(c.toString);
+        console.log(Cat.prototype.age);
+        console.log(Object.prototype);
+        console.log(Object)
+        // Object
+        // 모든 계체의 최상위, prototype은 객체의 설계도
+        // 모든 객체는 Object의 prototype을 통해 객체의 정보를 사용하고있다.
+        // 모든 객체는 Object를 상속하고 있다.
 
-        let obj2 = {id:1, name:"js1"};
-        console.log(obj2);
+        //좌측 instanceof 우측 
+        // 좌측이 우측을 통해 만들어졌는지(상속받았는지) 확인 
 
-        // 2. 생성자 함수
-        let obj3 = new Object();
-        obj3.id=3;
-        obj3.name='js2';
-        console.log(obj3);
-        console.log(typeof(obj3));
+        console.log(c instanceof Cat);
+        console.log(c instanceof Object)
+        console.log(Cat instanceof Object)
 
 
+        function person() {};
+
+        person.prototype.getPlanet = function () {
+            console.log("Earth");
+        }
+
+        function Korean(region) {
+            this.region = region
+
+            this.getLoc= function (){
+                console.log(this.region);
+            }
+        }
+        const k = new Korean('Pusan');
+        k.getLoc();
+        Korean.prototype=person.prototype;
+        
+        const k2 = new Korean('Sacheon');
+        k2.getPlanet();
+
+        console.log(k instanceof Object);
+        console.log(k instanceof Korean);
+        console.log(k2 instanceof Korean);
+        console.log(k2 instanceof person);
+
+        function a(){
+            
+        };
+       let ab = new a();
+       console.log(ab instanceof a);
+    // 상속을 받게되면 앞에 받았던 상속은 사라지나?
     </script>
 </body>
+
 </html>
