@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  배열 (Array)
+    // 배열: [1,2,...]
+    let arr1 =[1,2,3,4,5];
+    console.log(arr1);
+    console.log(arr1 instanceof Object);
+    let arr2 = new Array(1,2,3,4,5);
+    console.log(arr2);
+    
+    // 조회 : 배열명 [index]
+    console.log(arr1[0]);
+    // 길이 : length
+    console.log(arr1.length);
+    //추가 : 배열명.
+    arr1.push(7,8);
+    console.log('배열크기 '+arr1.length);
+    // 
+    console.log(arr1)
+    console.log(arr1[arr1.length-1]);
+    
+    for(let s =0 ;s<arr1.length; s++){
+        console.log(arr1[s]);
+    }
+        
+
+    // console.log(arr[0])
+    </script>
+</body>
+</html>
