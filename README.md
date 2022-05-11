@@ -31,4 +31,9 @@
 ## [condition_lab01](https://github.com/100SeongJun/JS/blob/main/step03_control_flow/condition_lab01.html)
 ### 조건문
 - 조건을 만족할 경우 실행 로직을 정해주는 명령문
-#### if, else, else if
+- if, else, else if 문 
+- switch case 문
+
+## [loop_while](https://github.com/100SeongJun/JS/blob/main/step03_control_flow/loop_lab02.html)
+### 반복문
+- 
