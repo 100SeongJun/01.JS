@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,25 @@
 </head>
 <body>
     <script>
+        let strNum='10';
+        let strNaN='Ten';
+        // 문자열을 숫자로 변환하여 반환
+        console.log(Number(strNum));  //10
+        console.log(typeof(Number(strNum)));  //number
+        console.log(Number(strNaN));    //NaN
+        console.log(typeof(Number(strNaN)));    //number
+
+        //parseXXX() 문자열을 숫자 타입으로 변환해줌
+        //parseInt()    // 소수점을 제외하고 정수로 반환(버림)
+        console.log(parseInt(3.14));    //3
+        console.log(parseInt(5.81));    //5
+        //parseFloat()
+        console.log(parseFloat('10.213')); //소수까지 모두 출력
+
+        // Number.toFixed() 지정한 소수점 자리까지만 남김
+        let fixedNum = 14.324324320;
+        console.log(fixedNum.toFixed(3));   //14.324
+        
         
     </script>
 </body>

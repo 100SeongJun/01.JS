@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(new Date);
+        let dateObj=new Date();
+        console.log(dateObj);
+        console.log(dateObj.getFullYear()); // 년
+        console.log(dateObj.getMonth()+1);  // 달    
+        console.log(dateObj.getDate());     // 일
+        console.log(dateObj.getDay());      // 요일
+        console.log(dateObj.getHours());    // 시간
+        console.log(dateObj.getMinutes());  // 분
+        console.log(dateObj.getSeconds());  // 초
+
+        // 20년 6월 1일
+        console.log(new Date(2020,5,1));
+        console.log(new Date("2020-06-01"));
+        console.log(new Date("2020/06/01"));
+        console.log(new Date("2020-06-01"));
+        
+        // Date.parse(str) :문자열에서 날짜 타입으로 변경
+        // 단 형식은 YYYY-MM-DDTHH:mm:ss
+        //"2020-06-01T09:00:00"
+        console.log(Date.parse("2020-06-01T09:00:00"));
+        console.log(new Date(Date.parse("2020-06-01T09:00:00")));
+        
+    </script>
+</body>
+</html>
