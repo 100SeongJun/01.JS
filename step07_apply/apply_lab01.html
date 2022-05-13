@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply_lab01</title>
+</head>
+
+<body>
+    <script>
+        /*        //삼항 연산자
+                // 조건 ? true : false
+                const arr = [1];
+                // if (arr.length === 0) {
+                //     console.log('요소가 없는 배열');
+                // }else{
+                //     console.log("요소가 있는 배열");
+                // };
+        
+                // arr.length === 0 ? console.log('요소가 없는 배열') : console.log('요소가 있는 배열');
+        */
+        /*        // Truthy/Fasly
+                let person = {
+                    name: 'js'
+                }
+                function printName(person) {
+                    if ((person === undefined) || (person === null)) {
+                        return;
+                    }
+                    console.log(person.name);
+                }
+                printName(person); // 정상 출력
+        
+                printName(); // 에러 발생 Cannot read properties of undefined
+                // 만약에 person = null ?
+                person = null;
+                printName(person); // Cannot read properties of null
+        
+                // var2로 바꿨을 때 문제 없이 실행 가능 -> 왜 가능한가?
+                //falsy : false처럼 행동하는 값
+                console.log(!false);
+                console.log(!undefined);
+                console.log(!0);
+                console.log(!null);
+                console.log(!'');
+                //truthy: flasy의 반대 개념
+                console.log(!3);
+                console.log(!'js');
+                console.log(![]);   //배열도 truthy
+                console.log(!{});   //객체도 truthy
+                console.log(!true);
+        */
+        let v = {};
+        if (v) {
+            console.log('truthy한 값');
+        }
+        v = null;
+        console.log(v ? true : false);  //false
+
+        // 부정연산자를 2개를 사용하면 객체 자체가 갖고 있는
+        // 참 혹은 거짓인 값을 출력해준다
+        // console.log(!!v);
+
+        /*      // && || 논리연산자
+                console.log(false && true);
+                console.log(false || true);
+                console.log(true && true);
+        
+                let cat = {
+                    name : '마일로'
+                }
+        
+                function getName(cat){
+                    // ver1
+                    // if(cat){
+                    //     return cat.name;
+                    // }
+                    // return undefined;
+                    // ver2
+                    return cat && cat.name;
+                }
+                console.log(getName(cat));
+                console.log(getName());
+                
+                // ver2 사용 가능한 이유
+                // and 연산 중 false를 만날 경우 뒷 부분은 무시하고 false반환
+                console.log();
+                console.log(true && 'js');
+                console.log(0 && 'js');
+                console.log(null && 'js');
+                console.log(null || 'js');
+                console.log(1 && 1);
+              
+                person = {
+                    name: 'js'
+                };
+        
+                function getName(person){
+                    let name = person && person.name;
+        
+                    // if(!name){
+                    //     return '이 객체는 이름이 없음';
+                    // }
+                    // return name;
+                    //ver 2
+                    return name || "이 객체는 이름이없음";
+                }
+        
+                console.log(getName(person));
+                
+                person={
+                    name:null
+                }
+                console.log(getName(person));
+                //ver 2가 가능한 이유
+                console.log(false || 'js');
+                console.log('js' || false);
+                console.log('js' || true);
+                console.log('js' || '');
+                console.log(1 || 'js');
+        */
+        /*        // 함수 파라미터
+                // 원의 넓이를 구하는 함수
+                function calcircleArea(r){
+                    return (Math.PI*r*r);
+                }
+                console.log(calcircleArea(5));
+                // 만약 인자값 없이 함수를 호출했다면
+                console.log(calcircleArea()); // NaN
+                // ? 따라서 인자값이 없을때에는 출력이 되도록
+                // 기본 r값을 1로 지정 -> 함수 설계
+                // 논리연산자 && || 사용
+        */
+        // function calcircleArea(r){
+        //     return Math.PI*r*r || Math.PI;
+        // }
+        // console.log(calcircleArea(5));
+        // console.log(calcircleArea());
+        // console.log(!NaN);  
+        // let calla = ((r=1)=>{return Math.PI*r*r;});
+        // console.log(calla());
+
+        // 파라미터 vs 인자
+        // 파라미터 : 함수를 정의할 때 사용하는 소괄호 안에 있는 변수
+        // 인자 : 함수를 호출할 때 사용하는 함수 내에 사용되는 변수
+        // 조건문 활용
+        // checkMonth() : (ver1) MMonth가 존재하는지 여부확인
+        // ver1
+        function checkMonth(month) {
+            // ver1-1
+            // if (month ===1 || month ===2) {
+            //     return true;
+            // }
+            // return false;
+            //ver 1-2
+            //return (month===1 || month===2);
+            //ver 1-3
+            let months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            return months.includes(month);
+        }
+        console.log(checkMonth(1));
+        console.log(checkMonth(13));
+
+        // get Month(month)
+        // ver1
+        function getMonth(month) {
+            //     //var1
+            //     if (month===1){ return '1월';}
+            //     if (month===2){ return '2월';}
+            //     if (month===3){ return '3월';}
+            // console.log(getMonth(1));
+            // ver2 (객체를 활용한 조건문)
+            let months = {
+                1: "1월",
+                2: "2월",
+                3: "3월"
+            }
+            // 완성하기, 해당 월이 없다면 
+            // '해당 월이 없습니다. '출력
+            // return months[month] || '해당 월이 없습니다.';
+            return months[month] || '해당 월이 없습니다.';
+
+        }
+        console.log(getMonth(1));
+
+/*        // 비구조화 문법
+        let obj = {x: 1,y:2};
+        let obj2 = {x:1,y:2};
+        let {x1,y1} =obj;
+        let {a,b} =obj2;
+        // console.log(x,y);
+        
+        function printvalue({x1,y1}){
+            console.log(x1);
+            console.log(y1 || 2);
+        }
+        // printvalue(obj);
+        // 만약 obj = {x:1};
+        // obj = {x:10};
+        // printvalue(obj);
+
+        // 배열
+        let arr2 = [1,2];
+
+        let [one,two] = arr2;
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(one);
+        console.log(two);
+
+        //객체 깊은 데이터
+        let deepObj = {
+            info :{
+                private:{
+                    name:'js',
+                    age:17,
+                    hobbies:['축구','게임']
+                }
+            },
+            purpose: '비구조화 테스트'
+        }
+*/
+        // 직접해보기
+        // let xxx = deepObj.info.private
+        // let name =xxx.name;
+        // let age =xxx.age;
+        // let hobbies =xxx.hobbies;
+
+        // let {name,age,hobbies} = deepOjb.info.private;
+        // console.log(name,age,hobbies[0],hobbies[1]);
+
+/*      상황에 따라 사용
+        let pickedObj={
+            name:'ㅋㅋ',
+            age:1,
+            hobbies:'축구'
+        };
+
+        let{
+            info:{
+                private:{
+                    name,
+                    age,
+                    hobbies:[first,second]
+                }
+            },
+        } = deepObj;
+
+        console.log(name);
+        console.log();
+        console.log(first+''+second);
+*/
+        //spread, rest  
+/*        //spread:... (상속개념)
+        let  planet = {
+            continent: 'Asia'
+
+        }
+        let  country = {
+            // continent: 'Asia',
+            ...planet,
+            country_name : 'ROK',
+
+        }
+        let  city = {
+            // continent: 'Asia',
+            // country_name : 'ROK',
+            ...country,
+            region:'Pusan'
+        }
+
+        console.log(country);
+        console.log(city);
+        
+        //배열 spread
+        let arr3=[1,2,6];
+        let arr4=[...arr3,5];
+        let arr5=[1,2,3];
+        console.log(arr4);
+*/
+        
+/*        // rest : ...
+        // 객체
+        let city = {
+            continent: 'Asia',
+            country_name: 'ROK',
+            region: 'Busan'
+        };
+
+        let { region, ...country} = city;
+
+        // console.log(country_name);
+        // console.log(...country);
+        
+        // 배열
+        let nums=[1,2,3,4,5];
+
+        let [first,...etc] = nums;
+        console.log(first);
+        console.log(etc);
+*/
+        // function sum(...rest){
+            
+        //     return rest.reduce((i,j)=>i+j);
+            
+        // }
+        // console.log(sum(1,2,3,4,5,6,7,8,9));
+  
+        // 상속
+
+/*      // 1. 프로토타입
+        function Parent(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+
+        function Child(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+        Child.prototype=Parent.prototype;
+        let p1 = new Parent("p1", 31);
+        let c1 = new Child("c1", 1);
+        console.log(p1);
+        console.log(c1);
+        Parent.prototype.getage=function(){
+            console.log(this.age);
+        }
+        // 프로토타입을 통해 상속을 할 경우 상속의 개념은 맞지만 문제가 존재(올바른 상속은아님)
+        // why? 자식 프로토타입에 함수를 선언해줬는데 부모 계층에서도 사용이 가능
+*/
+
+/*        //2. spread 상속
+         function Parent(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+
+        function Child(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+        Child.prototype = {...Parent.prototype};
+
+        Child.prototype.getName=function(){
+            console.log(this.name);
+        }
+        
+        // c1.getName();
+        // p1.getName();
+
+        let p2 = new Parent("p2",32);
+        let c2 = new Child("c2",2);
+        // console.log(p2);
+        console.log(c2);
+        c2.getName();
+        // p2.getName();
+        c2.getage();
+*/
+/*        // 3 . 제일 적절한 방법의 상속
+        // * [Child.prototype = Object.create(Parent.prototype);] -코드
+        // * check 해야함(line 388)
+        
+        function Parent(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+
+        function Child(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+        // 객체를 통한 상속이 제일 합당한 방법
+        Child.prototype = Object.create(Parent.prototype);
+        
+        Child.prototype.getName = function (){
+            console.log(this.name);
+        }
+
+        Parent.prototype.getAge = function (){
+            console.log(this.age);
+        }
+
+        let p3 = new Parent("p3", 33);
+        let c3 = new Child("c3", 3);
+        // check 부분 (누구로부터 만들어진 객체인지 확인법)
+        console.log(p3.__proto__.constructor);
+        console.log(c3.__proto__.constructor);
+*/
+/*        //4. Class를 통한 상속
+        class parent{
+            constructor(name,age){ 
+                this.name = name;
+                this.age = age;
+            }
+            getAge(){
+                console.log(this.age);
+            }
+        }
+        // 상속
+        class child extends parent {
+            constructor(name,age){
+                super(name,age);
+            }
+            getName(){
+                console.log(this.name);
+            }
+        }
+        let p = new parent('성준',26);
+        let c = new child('성준',26);
+        p.getAge();
+        c.getName();
+        c.getAge();
+        */
+       
+    </script>
+</body>
+
+</html>
