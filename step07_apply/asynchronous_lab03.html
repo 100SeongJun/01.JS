@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asynchronous_lab03</title>
+</head>
+
+<body>
+    <script>
+        // JS는 인터프리터 형식으로 순차적으로 진행됨
+        // 동기 (synchronous): 요청 결과 응답 후 다음 동작이 실행되는 방식
+        // 비동기(asynchronous) : 요청 결과 응답과 별개로 다음 동작이 실행되는 방식
+        // 왜 필요한가 ? -> 서버로부터 데이터 세팅, 문제 발생 시 별도로 실행되어야 하는 경우
+
+        // CALLBACK Function: 함수의 매개변수로 전달되는 함수
+        // -> 결과적으로 CALLBACK함수는 전달받은 함수 내에서 다시 호출
+
+        /*        function callBack(callBack) {
+                    setTimeout(() => {
+                        callBack();
+                    }, 1000);
+                }
+                //ver1
+                callBack(() => {
+                  callBack(() => {
+                    console.log("2초 후 실행");
+                  });
+                });
+                //ver2
+                callBack(() => {
+                    console.log("1초 후 callback함수 수행");
+                    callBack(() => {
+                        console.log("2초 후 callback함수 수행");
+                        callBack(() => {
+                            console.log("3초 후 callback 함수 수행");
+                        });
+                    });
+                });
+        */
+        // Promise 
+        // 전역객체(new x)
+        // console.log(Promise);
+        //문법
+        // resolve : new 연산자로 프로미스 객체 생성 가능
+        // reject :  객체 생성 시 실행자 함수를 인자로 받아 실행
+        // 프로미스는 진행되는 시점에 따라 상태값을 가짐
+        // 
+        // 실행자 함수의 종류는 2가지
+        // resolve(), reject()
+        // new Promise((resolve, reject) => {
+
+        // });
+        // new Promise((resolve, reject) => {
+
+        // });
+        // 대기(pending) : 프로미스 객체가 생성되어 대기 중인 상태
+
+        // 이행(fulfilled) : resolve()를 실행시켰을 때의 상태
+        new Promise((resolve, reject) => {
+            resolve();
+        });
+        // 거부(rejected) : reject()를 실행시켰을 때의 상태
+        // new Promise((resolve, reject) => {
+        //     reject()
+        // });
+
+        // 1초 후 실행 함수
+        let PromiseFunction = new Promise((resolve,reject)=>{
+            setInterval(()=>{
+                    resolve();
+            },1000)
+        })
+        PromiseFunction.then(()=>{
+            console.log('1초 후 프로미스실행 ');
+        });
+
+        
+    </script>
+</body>
+
+</html>
