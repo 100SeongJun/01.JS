@@ -8,7 +8,9 @@
 
 ## [객체와 배열](https://github.com/100SeongJun/JS/blob/main/step05_object/object.md)
 
-
-
 ??
 queryselector getElementbyID 차이
+
+- [HTTP통신방법](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP)
+
+![http요청](https://mdn.mozillademos.org/files/13687/HTTP_Request.png)
