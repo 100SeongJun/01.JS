@@ -12,24 +12,30 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- defer : html을 다 실행하고 js를 실행시키겠다는 옵션 -->
 </head>
 
 <body>
     <script>
-        axios.get('http://openapi.seoul.go.kr:8088/626b5a6344736a313437474d6c6c62/json/GlobalJobCounselRst/1/1000'
+        // 인증키 :5455685168736a3137367a65595668
+        axios.get('http://openapi.seoul.go.kr:8088/5455685168736a3137367a65595668/json/GetParkInfo/1/1000/'
         ,{
         ///json/GlobalJobCounselRst/1/100',{
-        }).then(res => res.data.GlobalJobCounselRst.row)
-        .then(data=>{
-            for (i in data){
-                if (Number(data[i].YYYYMM ) > 202107 && data[i].CATEGORY_NM == '교육'){
-                console.log(data[i]) ;}
-                
-            }
-            console.log(data);
+        }).then(res =>res.data.GetParkInfo.row)
+        .then(path => {
+            // console.log(path);
+            path.forEach(obj=>{
+                if (obj.SATURDAY_PAY_NM =='무료'){
+                    console.log(obj.ADDR);
+                }
+                // console.log(obj);
+                // console.log(obj.SATURDAY_PAY_NM);
+                // SATURDAY_PAY_NM: "무료"
+
+            })
         })
+
+        
     </script>
 </body>
 
