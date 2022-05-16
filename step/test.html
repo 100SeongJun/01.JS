@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Card</title>
+    <script src="https://kit.fontawesome.com/1c2c2462bf.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- defer : html을 다 실행하고 js를 실행시키겠다는 옵션 -->
+</head>
+
+<body>
+    <script>
+        axios.get('http://openapi.seoul.go.kr:8088/626b5a6344736a313437474d6c6c62/json/GlobalJobCounselRst/1/1000'
+        ,{
+        ///json/GlobalJobCounselRst/1/100',{
+        }).then(res => res.data.GlobalJobCounselRst.row)
+        .then(data=>{
+            for (i in data){
+                if (Number(data[i].YYYYMM ) > 202107 && data[i].CATEGORY_NM == '교육'){
+                console.log(data[i]) ;}
+                
+            }
+            console.log(data);
+        })
+    </script>
+</body>
+
+</html>
+
+
+
