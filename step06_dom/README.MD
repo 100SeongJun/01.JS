@@ -9,12 +9,13 @@
 - DOM Selection (선택)
 
 |명령어|코드|설명|
+|:-----:|:-----:|:-----:|
 |getElementBy##|document.getElementsByClassName('btn');|Id값을 통해 객체 접근|
 |querySelector| document.querySelector('.btn');|css선택자를 사용하여 요소 찾기 / 최상단 요소만 로직에 포함|
 |querySelectorALL|document.querySelectorAll('.btn');|nodelist 반환|
 |childNodes[i]|console.log(document.childNodes[1].childNodes[2]);|노드를 통해 접근|
 |createElement|document.createElement('hr');|hr태그 생성|
-
+--- 
 ## [이벤트](https://github.com/100SeongJun/JS/blob/main/step06_dom/event_lab02.html)
 
 - 인라인 방식
@@ -47,7 +48,7 @@
 - 이벤트 종류
   - 마우스 이벤트 (Onclick ,mouseup,mousedown,mousemove,mouseover)
   - 키보드 이벤트
-
+--- 
 ## [이벤트실습](https://github.com/100SeongJun/JS/blob/main/step06_dom/event_apply_lab03.html)
 
 1. 이벤트 흐름: 이벤트가 발생하는 html 요소는 계층구조로 돼있어서 우리가 알게 모르게 주변 요소에 영향을 미침

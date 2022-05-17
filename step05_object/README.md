@@ -87,6 +87,7 @@ console.log(todos.filter(todo => todo.done===true));
 |replace(바꾸려는 글자,바꿀 글자)|해당 글자를 원하는 글자로 변경|
 |split('')|기준에 따라 문자열을 분할하여 배열로 변환|
 |concat()|문자열 결합|
+---
 
 ## [숫자타입변환](https://github.com/100SeongJun/JS/blob/main/step05_object/number_lab04.html)
 
@@ -96,6 +97,7 @@ console.log(todos.filter(todo => todo.done===true));
 |parseInt(value)| 소수점을 제외하고 정수로 반환(버림)|
 |parseFloat(value)|소수까지 모두 출력|
 |Value.toFixed(n)|n 자리까지 남김|
+---
 
 ## [날짜](https://github.com/100SeongJun/JS/blob/main/step05_object/date_lab05.html)
 
