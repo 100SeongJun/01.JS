@@ -115,9 +115,10 @@
 ## [axios](https://github.com/100SeongJun/JS/blob/main/step07_apply/axios_fetch_lab05.html)
 
 - axios : 비동기 통신을 위해 사용되는 라이브러리(Promise 기반)
+
 |Method|내용|
 |:---------:|:---------:|
-|axios.get| 정보를 요청|
+|axios.get|정보를 요청|
 |axios.post|정보 입력(생성)|
 |axios.put|정보수정(전체 정보 수정(덮어쓰기))|
 |axios.patch|입력한 정보만 수정|
