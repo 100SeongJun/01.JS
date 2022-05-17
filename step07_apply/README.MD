@@ -88,33 +88,44 @@
 - 비동기(asynchronous) : 요청 결과 응답과 별개로 다음 동작이 실행되는 방식
 - 서버로부터 데이터 세팅, 문제 발생 시 별도로 실행되어야 하는 경우 필요
 
-- CALLBACK Fnc : 함수의 매개변수로 전달되는 함수
-- Promise : 전역객체(new 안됨)
-  - 문법
-    - resolve : new 연산자로 프로미스 객체 생성 가능
-    - reject : 객체 생성 시 실행자 함수를 인자로 받아 실행
-  - 프로미스는 진행되는 시점에 따라 상태값을 가짐
-  - 실행자 함수의 종류는 2가지
-    - resolve(), reject()
-  - 대기(pending) : 프로미스 객체가 생성되어 대기 중인 상태
-  - 이행(fulfilled) : resolve()를 실행시켰을 때의 상태
-  - 거부(rejected) : reject()를 실행시켰을 때의 상태
-  - 개선된 promise 사용방법 : 함수 내부에 반환 값으로 프로미스를 사용한다.
-  - 체이닝 메서드
-    - 함수의 리턴을 객체로 리턴
+### 1. CALLBACK Fnc
+
+-함수의 매개변수로 전달되는 함수
+
+### 2. Promise : 전역객체(new 안됨)
+
+- 문법
+  - resolve : new 연산자로 프로미스 객체 생성 가능
+  - reject : 객체 생성 시 실행자 함수를 인자로 받아 실행
+- 프로미스는 진행되는 시점에 따라 상태값을 가짐
+- 실행자 함수의 종류는 2가지
+  - resolve(), reject()
+- 대기(pending) : 프로미스 객체가 생성되어 대기 중인 상태
+- 이행(fulfilled) : resolve()를 실행시켰을 때의 상태
+- 거부(rejected) : reject()를 실행시켰을 때의 상태
+- 개선된 promise 사용방법 : 함수 내부에 반환 값으로 프로미스를 사용한다.
+- 체이닝 메서드
+  - 함수의 리턴을 객체로 리턴
 - try catch
   - 에러발생 시 이후에 대한 코드를 무시하는 catch로 처리
 
-- Async Fnc : 항상 promise를 반환 만약 promise를 반환하지 않는다면 암묵적으로 promise 반환
-  - await : async 함수 내에서 사용되며 async 함수의 실행을 일시 중지하고 전달된 promise를 기다린 후 async 함수 완료
+### 3. Async Fnc
 
-- XHR(XMLHttpRequest) : AJAX 요청을 생성하는 API
+- 항상 promise를 반환 만약 promise를 반환하지 않는다면 암묵적으로 promise 반환
+
+- await : async 함수 내에서 사용되며 async 함수의 실행을 일시 중지하고 전달된 promise를 기다린 후 async 함수 완료
+
+### 4. XHR(XMLHttpRequest)
+
+- AJAX 요청을 생성하는 API
 
 ---
 
 ## [axios](https://github.com/100SeongJun/JS/blob/main/step07_apply/axios_fetch_lab05.html)
 
-- axios : 비동기 통신을 위해 사용되는 라이브러리(Promise 기반)
+### 1. axios
+
+- 비동기 통신을 위해 사용되는 라이브러리(Promise 기반)
 
 |Method|내용|
 |:---------:|:---------:|
@@ -124,8 +135,20 @@
 |axios.patch|입력한 정보만 수정|
 |axios.delete|정보 삭제|
 
-- fetch : 자바 내장 라이브러리(Promise 기반)
-  - axios와 같은 method 존재
+### 2. fetch
 
+- 자바 내장 라이브러리(Promise 기반)
+- axios와 같은 method 존재
 
-### 
+---
+
+## 도움되는 Tool
+
+[PostMan](https://www.postman.com/)
+
+- Rest API가 잘 작동하는지 확인하는 툴
+
+[데이터 API](https://www.data.go.kr/)
+[서울 데이터API](http://data.seoul.go.kr/)
+
+- API 제공 사이트
