@@ -60,3 +60,51 @@ let likeArray = {
 
 - foreach()
   - 요소를 하나씩 모두 넘김 / 배열만 사용 가능한 메서드
+
+- map()
+  - 요소를 하나씩 모두 넘김
+
+```javascript
+  let infom = info.map(info => info.name);
+  
+```
+
+- filter()
+
+```javascript
+console.log(todos.filter(todo => todo.done===true));
+// 결과값을 배열로 돌려줌
+```
+
+---
+
+## [문자열](https://github.com/100SeongJun/JS/blob/main/step05_object/string_lab03.html)
+
+|명령어|설명|
+|'----'|'-----'|
+|charAt(idx)|해당 위치 인덱스의 문자 변환|
+|substring(idx1,idx2)|idx1부터 idx2 - 1 까지의 문자 반환|
+|replace(바꾸려는 글자,바꿀 글자)|해당 글자를 원하는 글자로 변경|
+|split('')|기준에 따라 문자열을 분할하여 배열로 변환|
+|concat()|문자열 결합|
+
+## [숫자타입변환](https://github.com/100SeongJun/JS/blob/main/step05_object/number_lab04.html)
+
+|명령어|설명|
+|'-------'|'-------'|
+|Number(value)|문자열 숫자로 변환|
+|parseInt(value)| 소수점을 제외하고 정수로 반환(버림)|
+|parseFloat(value)|소수까지 모두 출력|
+|Value.toFixed(n)|n 자리까지 남김|
+
+## [날짜](https://github.com/100SeongJun/JS/blob/main/step05_object/date_lab05.html)
+
+|메서드|설명|
+|'-------'|'-------'|
+|getFullYear()|년 출력|
+|getMonth()| 달 출력(-1 해줘야 원래 값)|
+|getDate()|일 출력|
+|getDay()|요일 출력(0:일요일)|
+|getHours()|시간 출력|
+|getMinutes()|분 출력|
+|getSeconds()|초 출력|
