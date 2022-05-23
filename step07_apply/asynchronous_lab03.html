@@ -8,7 +8,7 @@
     <title>asynchronous_lab03</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-        div{
+        div {
             border: 2px solid red;
         }
     </style>
@@ -308,8 +308,8 @@
         axios.get("https://jsonplaceholder.typicode.com/users")
             .then((response) => {
                 // response_key = Object.value(response.data[0])
-        //  모든 데이터 출력    
-              response_key = Object.keys(response.data[0])
+                //  모든 데이터 출력    
+                response_key = Object.keys(response.data[0])
 
                 for (let res_num = 0; res_num < response.data.length; res_num++) {
                     response_values = Object.values(response.data[res_num])
@@ -317,17 +317,17 @@
 
                         document.getElementById('viewResult').innerHTML +=
                             `${response_key[i]}: ${response_values[i]}<br>`
-                    
+
                     }
-                    document.getElementById('viewResult').innerHTML +='<br>'
+                    document.getElementById('viewResult').innerHTML += '<br>'
                 }
-                
-        
-            
-            
+
+
+
+
             })
 
-            
+
 
             // console.log(response.data));
 
